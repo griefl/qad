@@ -1,7 +1,7 @@
 Package: qad
 Type: Package
 Title: Quantification of Asymmetric Dependence
-Version: 1.0.1.9000
+Version: 1.0.2
 Authors@R: 
     c(person(given = "Florian", 
              family = "Griessenberger", 
@@ -22,7 +22,6 @@ License: GPL-2
 URL: https://github.com/griefl/qad
 BugReports: https://github.com/griefl/qad/issues
 Encoding: UTF-8
-LazyData: true
 Depends: 
     R (>= 2.10)
 Imports: 
@@ -43,3 +42,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
+LazyData: true

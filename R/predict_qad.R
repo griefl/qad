@@ -1,7 +1,7 @@
 #' Predict conditional probabilities
 #'
 #' @description The function \code{predict.qad()} can be utilized to predict the probabilities of the event that Y lies in
-#' specific intervals given X=x, or vice versa. Additionally, the mass of the conditional distribution functions are plotted.
+#' specific intervals given X=x, or vice versa. Thereby, the intervals are calculated as retransformed intervals (by using the empirical quantil function) defining the checkerboard grid. Additionally, the mass of the conditional distribution functions are plotted.
 #' The prediction can be computed in the sample setting as well as in the copula setting (pseudo-observation in the unit square).
 #'
 #' @param object an object of class 'qad', which determines the underlying checkerboard aggregation.
@@ -14,7 +14,8 @@
 #' @param panel.grid a logical indicating whether the panel.grid is plotted.
 #' @param ... some methods for this generic require additional arguments.  None are used in this method.
 #'
-#' @return a list containing a data.frame with the interval boundaries and the prediction probabilities and a plot depicting the mass of the conditional distributions functions.
+#' @return a list containing a data.frame with the computed intervals (lower and upper boundaries) and the prediction probabilities (i.e., the probability that Y lies in the interval I_i given X = x).
+#' Furthermore, a heatmap depicting the mass of the conditional distribution functions is returned.
 #'
 #' @note Predictions are only possible for values within the range of the sample (or between 0 and 1 in the copula setting). For given values exceeding the range NA is returned.
 #'
@@ -145,9 +146,9 @@ predict.qad <- function(object,
   print_prob <- data.frame(t(pred_prob[,4:NCOL(pred_prob)]))
   names(print_prob) <- pred_prob$Interval
   row.names(print_prob) <- names(pred_prob)[-c(1:3)]
-  cat("Intervall definition:\n")
+  cat(paste0("Intervalls for the variable ", setdiff(c("x1", "x2"), conditioned)," \n"))
   print.data.frame(pred_prob[,1:3])
-  cat("\nPrediction probabilities:\n")
+  cat(paste0("\nProbability that ",toupper(setdiff(c("x1", "x2"), conditioned))," given ",toupper(conditioned),"=",conditioned," lies in the interval I_i :\n"))
   print.data.frame(print_prob)
 
   if(pred_plot){

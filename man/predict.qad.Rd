@@ -36,11 +36,12 @@
 \item{...}{some methods for this generic require additional arguments.  None are used in this method.}
 }
 \value{
-a list containing a data.frame with the interval boundaries and the prediction probabilities and a plot depicting the mass of the conditional distributions functions.
+a list containing a data.frame with the computed intervals (lower and upper boundaries) and the prediction probabilities (i.e., the probability that Y lies in the interval I_i given X = x).
+Furthermore, a heatmap depicting the mass of the conditional distribution functions is returned.
 }
 \description{
 The function \code{predict.qad()} can be utilized to predict the probabilities of the event that Y lies in
-specific intervals given X=x, or vice versa. Additionally, the mass of the conditional distribution functions are plotted.
+specific intervals given X=x, or vice versa. Thereby, the intervals are calculated as retransformed intervals (by using the empirical quantil function) defining the checkerboard grid. Additionally, the mass of the conditional distribution functions are plotted.
 The prediction can be computed in the sample setting as well as in the copula setting (pseudo-observation in the unit square).
 }
 \note{

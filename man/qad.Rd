@@ -44,7 +44,7 @@ qad(x, ...)
 
 \item{nperm}{an integer indicating the number of permutation runs (if p.value = TRUE)}
 
-\item{p.value_asymmetry}{a logical indicating whether to return a p-value for the measure of asymmetry (based on bootstrap).}
+\item{p.value_asymmetry}{a logical indicating whether to return a (heuristic) p-value for the measure of asymmetry (based on bootstrap).}
 
 \item{nboot}{an integer indicating the number of runs for the bootstrap.}
 
