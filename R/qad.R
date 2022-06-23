@@ -19,7 +19,7 @@
 #' We first compute the empirical copula of a two-dimensional sample, aggregate it to the so called empirical checkerboard copula (ECBC), and
 #' calculate zeta_1 of the ECBC and its transpose. In order to test for independence (in both directions), a built-in p-value
 #' is implemented (a permutation test with nperm permutation runs to estimate the p-value).
-#' Furthermore, a bootstrap test with nboot runs can be applied to estimate a p-value for the measure of asymmetry a.
+#' Furthermore, a (heuristic) bootstrap test with nboot runs can be applied to estimate a p-value for the measure of asymmetry a.
 #'
 #'
 #' @return qad returns an object of class qad containing the following components:
@@ -71,7 +71,7 @@
 #' n <- 100
 #' x <- runif(n,0,1)
 #' y <- (2*x) %% 1
-#' qad(x, y, p.value_asymmetry = TRUE)
+#' qad(x, y)
 
 
 
@@ -298,7 +298,7 @@ qad.numeric <- function(x, y , resolution = NULL,
 #' @param min.res an integer indicating the necessary minimum resolution of the checkerboard grid to compute qad, otherwise the result is NA (default = 3).
 #' @param p.value a logical indicating whether to return a p-value of rejecting independence (based on permutation).
 #' @param nperm an integer indicating the number of permutation runs.
-#' @param p.adjust.method a character string denoting the p.value correction method (see stats::p.adjust). Options are c("holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr" (default), "none").
+#' @param p.adjust.method a character string denoting the p.value correction method (see function p.adjust in stats). Options are c('holm', 'hochberg', 'hommel', 'bonferroni', 'BH', 'BY', 'fdr' (default), 'none')
 #' @param p.value_asymmetry a logical indicating whether a p-value (based on bootstrap) is computed for the measure of asymmetry.
 #' @param nboot an integer indicating the number of bootstrapping runs.
 #'

@@ -26,7 +26,7 @@ pairwise.qad(
 
 \item{nperm}{an integer indicating the number of permutation runs.}
 
-\item{p.adjust.method}{a character string denoting the p.value correction method (see stats::p.adjust). Options are c("holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr" (default), "none").}
+\item{p.adjust.method}{a character string denoting the p.value correction method (see function p.adjust in stats). Options are c('holm', 'hochberg', 'hommel', 'bonferroni', 'BH', 'BY', 'fdr' (default), 'none')}
 
 \item{p.value_asymmetry}{a logical indicating whether a p-value (based on bootstrap) is computed for the measure of asymmetry.}
 

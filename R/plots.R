@@ -240,10 +240,10 @@ plot_density <- function(mass_matrix, density=TRUE, color = "plasma", rb_values 
 #' @param significance a logical indicating whether significant values with respect to the (adjusted) qad p.values are denoted by a star.
 #' @param use_p.adjust a logical indicating if the adjusted p.values are used (default = TRUE).
 #' @param sign.level numeric value indicating the significance level.
-#' @param scale character indicating whether the heatmap uses a relative or absolute scale. Options are "rel" or "abs" (default).
+#' @param scale character indicating whether the heatmap uses a relative or absolute scale. Options are 'rel' or 'abs' (default).
 #' @param color Select the color palette. Options are c("plasma" (default), "viridis", "inferno", "magma", "cividis", "rainbow").
 #' @param white_font numeric between 0 and 1 denoting the start value for white text font (default = 0.7)
-#' @param rb_values a vector of size 3 with number of values, start value and end value in the rainbow colors space (if color = "rainbow").
+#' @param rb_values a vector of size 3 with number of values, start value and end value in the rainbow colors space (if color = 'rainbow').
 #' @param title The text for the title
 #' @details If the output of \code{pairwise.qad}() contains p-values, significant values can be highlighted by stars by setting significance=TRUE.
 #'

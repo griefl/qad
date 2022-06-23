@@ -32,13 +32,13 @@ Options are c("dependence", "max.dependence", "asymmetry").}
 
 \item{sign.level}{numeric value indicating the significance level.}
 
-\item{scale}{character indicating whether the heatmap uses a relative or absolute scale. Options are "rel" or "abs" (default).}
+\item{scale}{character indicating whether the heatmap uses a relative or absolute scale. Options are 'rel' or 'abs' (default).}
 
 \item{color}{Select the color palette. Options are c("plasma" (default), "viridis", "inferno", "magma", "cividis", "rainbow").}
 
 \item{white_font}{numeric between 0 and 1 denoting the start value for white text font (default = 0.7)}
 
-\item{rb_values}{a vector of size 3 with number of values, start value and end value in the rainbow colors space (if color = "rainbow").}
+\item{rb_values}{a vector of size 3 with number of values, start value and end value in the rainbow colors space (if color = 'rainbow').}
 
 \item{title}{The text for the title}
 }
