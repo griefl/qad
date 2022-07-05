@@ -1,12 +1,15 @@
 Package: qad
 Type: Package
 Title: Quantification of Asymmetric Dependence
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: 
-    c(person(given = "Florian", 
-             family = "Griessenberger", 
+    c(person(given = "Thimo", 
+             family = "Kasper", 
              role = c("aut", "cre"), 
-             email = "florian.griessenberger@sbg.ac.at"),
+             email = "thimo.kasper@plus.ac.at"),
+      person(given = "Florian", 
+             family = "Griessenberger", 
+             role = "aut"),
       person(given = "Robert R.",
              family = "Junker", 
              role = "aut"),

@@ -4,6 +4,17 @@
 
   <!-- NEWS.md is generated from NEWS.Rmd. Please edit that file -->
 
+# qad 1.0.3
+
+##Changes
+- New maintainer
+
+# qad 1.0.2
+
+## Minor changes
+- new font color in heatmap.color
+- p.value adjustment in pairwise.qad
+
 
 # qad 1.0.1
 
